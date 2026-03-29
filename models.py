@@ -243,8 +243,8 @@ def ensure_performance_indexes():
         "CREATE INDEX IF NOT EXISTS idx_channel_role_channel_role ON channel_role_permission(channel_id, team_role)",
         "CREATE INDEX IF NOT EXISTS idx_channel_workspace_name ON channel(workspace_id, name)",
         "CREATE INDEX IF NOT EXISTS idx_channel_workspace_private ON channel(workspace_id, is_private_group)",
-        "CREATE INDEX IF NOT EXISTS idx_user_workspace ON user(workspace_id)",
-        "CREATE INDEX IF NOT EXISTS idx_user_team_name ON user(team_name)",
+        "CREATE INDEX IF NOT EXISTS idx_user_workspace ON \"user\"(workspace_id)",
+        "CREATE INDEX IF NOT EXISTS idx_user_team_name ON \"user\"(team_name)",
     ]
     for stmt in statements:
         db.session.execute(text(stmt))
