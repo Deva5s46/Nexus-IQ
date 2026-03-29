@@ -6,6 +6,7 @@ werkzeug
 eventlet
 gunicorn
 cryptography
+psycopg2-binary
 # Optional for full SQLite file encryption (SQLCipher mode):
 # pysqlcipher3
 python-dotenv
